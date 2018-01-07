@@ -3,7 +3,6 @@
 #include <string.h>
 #include <Windows.h> //v pripade potreby nepouzivat tento import lze prejmenovat void 'tisk2' na 'tisk',
 					//void 'tisk' zakomentovat a taky zakomentovat prvni prikaz v int 'main'
-#include <malloc.h>
 #include <time.h>
 
 typedef struct{
@@ -132,9 +131,7 @@ void tisk2(char kostka[5][5][5]){
 	//posledni ctverec
 	printf("       |%c|%c|%c|\n", barvy[1][0][1], barvy[1][0][2], barvy[1][0][3]);
 	printf("       |%c|%c|%c|\n", barvy[2][0][1], barvy[2][0][2], barvy[2][0][3]);
-	printf("       |%c|%c|%c|\n\n", barvy[3][0][1], barvy[3][0][2], barvy[3][0][3]);	
-
-	free(barvy);	
+	printf("       |%c|%c|%c|\n\n", barvy[3][0][1], barvy[3][0][2], barvy[3][0][3]);		
 }
 
 void tisk(char kostka[5][5][5]){
@@ -320,8 +317,6 @@ void tisk(char kostka[5][5][5]){
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); printf("|");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), barvy[3][0][3]); printf(" ");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); printf("|\n\n");
-	
-	free(barvy);
 }
 
 void tah(char ch, int kolikrat, char kostka[5][5][5], char vypsat){
@@ -1117,7 +1112,6 @@ void prectiScramble(char kostka[5][5][5]){
 		}
 	}
 	if(prvni != '0') tah(prvni, 1, kostka, 1);
-	free(scramble);
 	printf("\n");
 	tisk(kostka);
 }
