@@ -960,11 +960,11 @@ void uvodniRecicky(){
 	printf("Vitej v programu na skladani Rubikovy kostky Rubix.\n\n");
 	printf("Doporucuju si nejdriv precist dokumenty Notace, kde je popsane znaceni tahu,\n");
 	printf("a Navod, kde je navod na skladani Rubikovky.\n\n");
-	printf("Tomuto programu muzete bud zadat scramble (= sled tahu, kterymi se kostka rozlozi),\n");
+	printf("Tomuto programu muzes bud zadat scramble (= sled tahu, kterymi se kostka rozlozi),\n");
 	printf("nebo si nechat nejaky vygenerovat. Program pote vypise reseni postupne po krocich;\n");
 	printf("reseni bude velice podobne reseni pomoci zacatecnicke metody. Program bude take\n");
-	printf("prubezne vypisovat stav Rubikovky pomoci site krychle, takze muzete kontrolovat,\n");
-	printf("zda mate svoji Rubikovku ve stejnem stavu jako pocitac. Doporucuju se orientovat\n");
+	printf("prubezne vypisovat stav Rubikovky pomoci site krychle, takze muzes kontrolovat,\n");
+	printf("zda mas svoji Rubikovku ve stejnem stavu jako pocitac. Doporucuju se orientovat\n");
 	printf("podle barvy ve stredech jednotlivych stran, protoze ty maji vzdy stejnou polohu vuci\n");
 	printf("sobe. Z technickych duvodu jsem musel nahradit oranzovou barvu barvou fialovou.\n");
 	printf("Pri rozkladani kostky ji drz tak, ze budes mit oranzovy stred pred sebou a bily dole.\n");
@@ -2079,7 +2079,7 @@ int PLL(char kostka[5][5][5], int pocety){
 		}
 	}
 	s1 = najdiSouradnice(kostka, 34);
-	pom = delejTahDokud(kostka, 'U', 36, 3, s1.j, s1.k); //delej U dokud oranzovo-zeleno-zluty roh je nad oranzovo-zelenou hranou
+	pom = delejTahDokud(kostka, 'U', 36, 3, s1.j, s1.k); //delej U dokud oranzovo-zeleno-zluty roh neni nad oranzovo-zelenou hranou
 	tah('U', pom, kostka, 1);
 	if(pom != 0) printf("\n");
 	
